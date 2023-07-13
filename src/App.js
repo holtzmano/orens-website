@@ -4,6 +4,7 @@ import HomePage from "./components/HomePage";
 import About from "./components/About";
 import CV from "./components/CV";
 import Projects from "./components/Projects";
+import FeedbackForm from "./components/FeedbackForm";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
               <Route path="/about" element={<About />}></Route>
               <Route path="/cv" element={<CV />}></Route>
               <Route path="/projects" element={<Projects />}></Route>
+              <Route path="/feedback" element={<FeedbackForm />}></Route>
           </Routes>
       </Router>
     </div>

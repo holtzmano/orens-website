@@ -11,6 +11,7 @@ function HomePage() {
                 <button className="button">CV</button>
             </a>
             <Link to="/projects"> <button className="button">Projects</button> </Link>
+            <Link to="/feedback"> <button className="button">Feedback</button> </Link>
         </div>
     );
 }
