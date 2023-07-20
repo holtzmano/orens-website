@@ -45,56 +45,53 @@
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
 }
 
+/* Use gradient background for the overall feedback container */
 .feedback {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f5f5f5;
+    background: linear-gradient(135deg, #83a4d4, #b6fbff); /* Gradient */
+    font-family: 'Poppins', sans-serif; /* Use a modern font */
 }
 
-.feedback {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #f5f5f5;
-}
-
+/* Stylish form container */
 .feedback form {
-    width: 400px;  /* Smaller width */
+    width: 400px;
     background-color: white;
-    padding: 30px;  /* Larger padding */
-    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.2);
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Subtle shadow */
     border-radius: 5px;
+    margin: 0 auto;
+    max-width: 600px; /* To ensure the form isn't too wide on larger screens */
+    margin-top: 20px; /* To ensure it's not touching the screen top */
 }
 
 .feedback h1 {
     text-align: center;
-    margin-bottom: 30px;  /* Larger margin */
+    margin-bottom: 30px;
     color: #333;
-    font-size: 2em;  /* Larger text */
+    font-size: 2em;
 }
 
 .feedback label {
     display: block;
-    margin: 15px 0;  /* Larger margin */
-    font-size: 1.2em;  /* Larger text */
+    margin: 15px 0;
+    font-size: 1.2em;
     color: #333;
 }
 
 .feedback input, .feedback textarea {
     width: 100%;
     border: 1px solid #888;
-    padding: 15px;  /* Larger padding */
-    font-size: 1.2em;  /* Larger text */
+    padding: 15px;
+    font-size: 1.2em;
     border-radius: 3px;
 }
 
 .feedback input[type="date"] {
-    font-size: 1.1em;  /* Larger text */
+    font-size: 1.1em;
 }
 
 .feedback input[type="submit"] {
@@ -102,11 +99,49 @@
     background-color: #007BFF;
     color: white;
     cursor: pointer;
-    padding: 10px 20px;  /* Larger padding */
-    font-size: 1.2em;  /* Larger text */
-    margin-top: 30px;  /* Larger margin */
+    padding: 10px 20px;
+    font-size: 1.2em;
+    margin-top: 30px;
 }
 
 .feedback input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.rating-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.rating-section p {
+    margin-right: 20px;
+}
+
+.star {
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: color 0.2s;
+    color: darkgray;
+}
+
+.active {
+    color: gold;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked ~ .star {
+    color: gold;
+}
+
+input[type="radio"]:checked ~ .star,
+input[type="radio"]:checked ~ label:nth-of-type(-n+5) .star,
+input[type="radio"]:checked ~ label:nth-of-type(-n+4) .star,
+input[type="radio"]:checked ~ label:nth-of-type(-n+3) .star,
+input[type="radio"]:checked ~ label:nth-of-type(-n+2) .star {
+    color: gold;
 }
