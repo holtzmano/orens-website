@@ -93,7 +93,7 @@ function FeedbackForm() {
 
 
                 <label>
-                    Feedback:
+                    Feedback and Suggestions:
                     <textarea rows="5" value={feedback} onChange={(e) => setFeedback(e.target.value)} required/>
                 </label>
 

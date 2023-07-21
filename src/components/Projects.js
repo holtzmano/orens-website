@@ -5,37 +5,37 @@ function Projects() {
     const projects = {
         "Hotel Rater": {
             subjects: ["Python", "NLP", "Deep Learning"],
-            image: "logo192.png",  // Update with the actual paths to your images
+            image: "trip-advisor.jpg",  // Update with the actual paths to your images
             link: "https://github.com/holtzmano/Hotel-Rater",
         },
         "NBA betting app": {
             subjects: ["JavaScript", "React"],
-            image: "logo192.png",
+            image: "nba-logo-design.jpg",
             link: "https://github.com/holtzmano/nba-app-vol3",
         },
         "Star Wars Pacman": {
             subjects: ["C++"],
-            image: "logo192.png",
+            image: "pac-star.jpg",
             link: "https://github.com/holtzmano/Star-Wars-Pacman",
         },
         "Digit Recognition": {
             subjects: ["Python", "NLP", "Deep Learning", "Machine Learning"],
-            image: "logo192.png",  // Update with the actual paths to your images
+            image: "mnist-dataset-of-image-recognition.png",  // Update with the actual paths to your images
             link: "https://github.com/holtzmano/Analysis-of-MNIST-dataset-",
         },
         "Appointment Registration": {
             subjects: ["Python"],
-            image: "logo192.png",
+            image: "appointment.png",
             link: "https://github.com/holtzmano/Covid-registration",
         },
         "Color Completion in Images": {
             subjects: ["Python"],
-            image: "logo192.png",
+            image: "bw_colorization_opencv_arch.png",
             link: "https://github.com/holtzmano/Completing-color-in-images-with-PCA",
         },
         "Hulda Game": {
             subjects: ["C++"],
-            image: "logo192.png",
+            image: "hulda-game.png",
             link: "https://github.com/BarIfrah/Hulda-FinalProject",
         }
     };
