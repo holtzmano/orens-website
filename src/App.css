@@ -89,13 +89,15 @@
 .feedback input, .feedback textarea {
     width: 100%;
     border: 1px solid #888;
-    padding: 15px;
-    font-size: 1.2em;
+    padding: 10px 15px 10px 10px; /* Reduced left padding from 15px to 10px */
+    padding-right: 1px;
+    font-size: 1.6em;
     border-radius: 3px;
 }
 
 .feedback input[type="date"] {
-    font-size: 1.1em;
+    font-size: 1.5em;
+    padding-right: 1px; /* Also reduced left padding here for consistency */
 }
 
 .feedback input[type="submit"] {
@@ -110,6 +112,10 @@
 
 .feedback input[type="submit"]:hover {
     background-color: #0056b3;
+}
+
+.category-title {
+    font-size: 1.5em; /* Adjust this value as desired */
 }
 
 .rating-section {

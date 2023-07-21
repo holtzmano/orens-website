@@ -65,11 +65,11 @@ function FeedbackForm() {
                     <input type="date" value={date} onChange={(e) => setDate(e.target.value)} required/>
                 </label>
 
-                {["Design & Aesthetics", "Navigation", "Content Quality", "Performance & Speed"].map((category, idx) => {
+                {["Design", "Navigation", "Content", "Speed"].map((category, idx) => {
                     const setters = [setRatingDesign, setRatingNavigation, setRatingContent, setRatingPerformance];
                     return (
                         <div key={idx} className="rating-section">
-                            <p>Rate {category}:</p>
+                            <p className="category-title">{category}:</p>
                             {[...Array(5)].map((star, i) => {
                                 const ratingValue = i + 1;
                                 return (
@@ -78,6 +78,7 @@ function FeedbackForm() {
                                             type="radio"
                                             name={`rating${category.replace(/ & | /g, '')}`}
                                             value={ratingValue}
+                                            checked={ratingValue === currentRatings[idx]}
                                             onClick={() => setters[idx](ratingValue)}
                                         />
                                         <span className={`star ${ratingValue <= currentRatings[idx] ? 'active' : ''}`}>&#9733;</span>
