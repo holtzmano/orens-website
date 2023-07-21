@@ -67,6 +67,7 @@
     height: 100vh;
     background: linear-gradient(135deg, #83a4d4, #b6fbff); /* Gradient */
     font-family: 'Poppins', sans-serif; /* Use a modern font */
+    overflow-y: auto;
 }
 
 /* Stylish form container */
@@ -86,6 +87,7 @@
     margin-bottom: 30px;
     color: #333;
     font-size: 2em;
+    margin-top: 50px;
 }
 
 .feedback label {
