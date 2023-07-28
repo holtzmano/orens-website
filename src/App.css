@@ -1,11 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
-
-
-
 
 .App {
   text-align: center;
@@ -14,6 +13,7 @@
 .button {
     background-color: #4CAF50;
     color: white;
+    margin: 10px 0;
     padding: 15px 32px;
     text-align: center;
     font-size: 16px;
@@ -24,7 +24,11 @@
     transition: all 0.3s ease 0s;
 }
 
-.button:hover {
+.back-button {
+    background-color: #ff9900; /* Just an example color */
+}
+
+.button:hover, .back-button:hover {
     background-color: red;
     box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
     color: #fff;
@@ -43,6 +47,8 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    width: 100%;
+    position: relative;  /* This makes sure child elements with absolute positioning will be relative to this element */
 }
 
 .homepage h1 {
@@ -56,6 +62,16 @@
     font-size: 1.5em;
     margin-bottom: 2em;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, .5);
+}
+
+.developer-credit {
+    position: absolute;  /* This will position the div relative to the homepage div */
+    bottom: 10px;        /* This will place the div 10px above the bottom of the homepage div */
+    left: 10px;          /* This will place the div 10px from the left of the homepage div */
+    font-family: 'Poppins', sans-serif;  /* A modern, professional-looking font. Make sure it's imported or change it to a font you are using */
+    font-size: 1.5em;    /* Relatively large font size */
+    color: #98adcf;
+    font-weight: 600;    /* Bold font weight */
 }
 
 /* Use gradient background for the overall feedback container */
@@ -166,3 +182,16 @@ input[type="radio"]:checked ~ label:nth-of-type(-n+3) .star,
 input[type="radio"]:checked ~ label:nth-of-type(-n+2) .star {
     color: gold;
 }
+
+
+.social-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Take the full width of its parent */
+}
+
+/* Adjust margins for each icon for better control */
+.social-icons a {
+    margin: 0 10px; /* Add horizontal margins */
+}
+

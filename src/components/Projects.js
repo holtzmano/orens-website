@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import '../App.css'
+import {Link} from "react-router-dom";
 
 function Projects() {
+    useEffect(() => {
+        document.title = "Projects | Oren Holtzman";
+    }, []);
+
     const projects = {
         "Hotel Rater": {
             subjects: ["Python", "NLP", "Deep Learning"],
@@ -48,6 +53,9 @@ function Projects() {
 
     return (
         <div className="projects">
+            <Link to="/">
+                <button className="button back-button">Back to Main Menu</button>
+            </Link>
             <h1>Oren's Projects:</h1>
             <h3>Select Subject:</h3>
             <select onChange={(e) => setSelectedSubject(e.target.value)}>

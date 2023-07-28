@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import '../App.css';
 import { ref, push } from "firebase/database";
 import { database } from '../firebaseConfig';
+import { Link } from "react-router-dom";
+
 
 function FeedbackForm() {
     const [name, setName] = useState('');
@@ -11,6 +13,10 @@ function FeedbackForm() {
     const [ratingNavigation, setRatingNavigation] = useState(0);
     const [ratingContent, setRatingContent] = useState(0);
     const [ratingPerformance, setRatingPerformance] = useState(0);
+
+    useEffect(() => {
+        document.title = "Feedback | Oren Holtzman";
+    }, []);
 
     const resetForm = () => {
         setName('');
@@ -52,6 +58,9 @@ function FeedbackForm() {
 
     return (
         <div className="feedback">
+            <Link to="/">
+                <button className="button back-button">Back to Main Menu</button>
+            </Link>
             <form onSubmit={handleSubmit}>
                 <h1>Please Give Me Your Feedback</h1>
 
