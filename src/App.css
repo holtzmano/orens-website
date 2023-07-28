@@ -10,21 +10,30 @@
   text-align: center;
 }
 
+.content-below-icons {
+    padding-top: 50px; /* Adjust this value accordingly */
+}
+
 .button {
     background-color: #4CAF50;
     color: white;
     margin: 10px 0;
     padding: 15px 32px;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease 0s;
+    width: 135px; /* Or whatever width suits your design */
+    height: 50px; /* If you want to set a fixed height */
 }
 
+
 .back-button {
+    width: 275px; /* Or whatever width suits your design */
+    height: 50px;
     background-color: #ff9900; /* Just an example color */
 }
 
@@ -41,13 +50,14 @@
 
 
 .homepage {
-    background: linear-gradient(to right, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background: linear-gradient(#0f0c29, #302b63, #24243e); /* This creates a subtle blue gradient */
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     width: 100%;
+    padding-top: 50px;
     position: relative;  /* This makes sure child elements with absolute positioning will be relative to this element */
 }
 
@@ -188,6 +198,7 @@ input[type="radio"]:checked ~ label:nth-of-type(-n+2) .star {
     display: flex;
     justify-content: space-between;
     width: 100%; /* Take the full width of its parent */
+    margin-top: -250px;
 }
 
 /* Adjust margins for each icon for better control */
